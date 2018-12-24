@@ -11,24 +11,23 @@ import {ProductComponent} from './product/product.component';
 import {ProductDetailComponent} from './product-detail/product-detail.component';
 import {ProfileComponent} from './profile/profile.component';
 import {AppRoutingModule} from "./app-routing.module";
+import {ProfileModule} from "./profile/profile.module";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent,
     RegisterComponent,
     InloggenComponent,
     ProductComponent,
     ProductDetailComponent,
-    ProfileComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
     ProjectModule,
-
+ProfileModule
   ],
   providers: [],
   bootstrap: [AppComponent]
