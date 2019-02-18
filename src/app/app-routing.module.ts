@@ -1,11 +1,19 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {ProfileComponent} from './profile/profile.component';
-import {ProfileModule} from './profile/profile.module';
+import {ProfileComponent} from './pages/profile/profile.component';
+import {LoginComponent} from './pages/login/login.component';
+import {AuthGuard} from './shared/guards/auth.guard';
 
 const routes: Routes = [
-  {path: 'profile', component: ProfileComponent},
-  {path: 'profile/edit', component: ProfileComponent},
+  {
+    path: '',
+    component: LoginComponent,
+    canActivate: [AuthGuard]
+  },
+  {path: 'login',
+    component: LoginComponent},
+  {path: 'app/profile', component: ProfileComponent},
+  {path: 'app/profile/edit', component: ProfileComponent},
 
 
 ];

@@ -1,0 +1,68 @@
+@import "~bootstrap/scss/bootstrap-grid";
+
+nav {
+  height: 50px;
+  width: calc(100% - 250px);
+  left: 250px;
+  right: 0;
+  z-index: 15;
+
+  background-color: #fff;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.filling {
+  height: 50px;
+
+  @include media-breakpoint-down(sm) {
+    height: 0;
+  }
+}
+
+.navbar .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.dropdown img {
+  cursor: pointer;
+}
+
+.dropdown-toggle {
+  color: white;
+  background-color: #edca1b;
+  margin-right: 1em;
+
+  &:hover {
+    background-color: darken(#edca1b, 10);
+  }
+}
+
+.userimg {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1em;
+}
+
+.header {
+  padding-right: 10px;
+  display: block;
+
+  .header-item {
+    display: inline-block;
+
+    img {
+      height: 38px;
+      border-radius: 50%;
+    }
+  }
+}

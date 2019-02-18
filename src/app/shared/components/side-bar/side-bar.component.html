@@ -1,0 +1,81 @@
+<nav class="p-0 d-md-block navbar-light">
+  <div class="navbar-brand m-0 container logo-container">
+    <div class="px-3">
+      <a class="logo px-3" routerLink="/">
+        <img src="/assets/logo.png" alt="Albert">
+      </a>
+    </div>
+  </div>
+
+  <div class="button-container p-3">
+    <button (click)="toggleMenu()" class="navbar-toggler hidden-sm-up float-right" type="button" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <div class="sidebar-sticky" [class.active]="menu">
+    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1">
+      Acties
+    </h6>
+    <hr class="hrPadding">
+    <ul class="nav flex-column mb-2">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/']">
+          <span data-feather="file-text"></span>
+          Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/app/projects']">
+          <span data-feather="file-text"></span>
+          Projecten
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/app/expenses']">
+          <span data-feather="file-text"></span>
+          Onkosten
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/app/invoices']">
+          <span data-feather="file-text"></span>
+          Facturen
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/app/reports']">
+          <span data-feather="file-text"></span>
+          Rapportages
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/app/quotations']">
+          <span data-feather="file-text"></span>
+          Offertes
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/app/contacts']">
+          <span data-feather="file-text"></span>
+          Contacten
+        </a>
+      </li>
+    </ul>
+    <hr class="hrPadding">
+    <ul class="nav flex-column mb-2">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/app/profile']">
+          <span data-feather="file-text"></span>
+          Profiel
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/app/settings']">
+          <span data-feather="file-text"></span>
+          Instellingen
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

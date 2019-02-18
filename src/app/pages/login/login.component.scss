@@ -1,0 +1,46 @@
+@import "../../../../node_modules/bootstrap/scss/bootstrap-grid";
+
+.container {
+  margin: 0;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  max-width: var(--breakpoint-md);
+
+  @include media-breakpoint-down(md) {
+    max-width: var(--breakpoint-sm);
+
+    padding: 30px;
+
+    .image-container {
+      width: 100%;
+      float: none;
+
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100px;
+      }
+    }
+
+    .form-container {
+      width: 100%;
+      float: none;
+    }
+  }
+}
+
+.image-container {
+  display: block;
+  width: 33%;
+  float: right;
+}
+
+.form-container {
+  display: block;
+  width: 66%;
+  float: left;
+}
