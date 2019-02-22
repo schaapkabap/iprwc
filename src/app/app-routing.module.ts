@@ -3,17 +3,42 @@ import {Routes, RouterModule} from '@angular/router';
 import {ProfileComponent} from './pages/profile/profile.component';
 import {LoginComponent} from './pages/login/login.component';
 import {AuthGuard} from './shared/guards/auth.guard';
+import {ProductComponent} from './pages/product/product.component';
+import {LogoutComponent} from './pages/logout/logout.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: LoginComponent,
+    path: 'app',
+    component: ProductComponent,
     canActivate: [AuthGuard]
   },
-  {path: 'login',
-    component: LoginComponent},
-  {path: 'app/profile', component: ProfileComponent},
-  {path: 'app/profile/edit', component: ProfileComponent},
+  {
+    path: 'app/login',
+    component: LoginComponent
+  },
+  {
+    path: 'app/logout',
+    component: LogoutComponent
+  },
+  {
+    path: 'app/product',
+    component: ProductComponent
+  },
+  {
+    path: 'app/product/{id}',
+    component: ProductComponent
+  },
+
+  {
+    path: 'app/profile',
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'app/profile/edit',
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
+  }
 
 
 ];

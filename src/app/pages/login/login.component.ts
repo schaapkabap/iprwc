@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     this.auth.logout();
 
     // Setup route
-    this.url = this.route.snapshot.queryParams['url'] || '/';
+    this.url = this.route.snapshot.queryParams['url'] || '/app/product';
   }
 
   onLogin() {
