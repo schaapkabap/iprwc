@@ -2,28 +2,20 @@
   <div class="header float-right">
     <div class="header-item">
       <div class="dropdown">
-        <button class="btn dropdown-toggle add-btn" data-toggle="dropdown">Toevoegen</button>
+        <button class="btn dropdown-toggle add-btn" data-toggle="dropdown">Winkelwagen</button>
 
         <div class="dropdown-menu">
-          <a class="dropdown-item" [routerLink]="['']">Project</a>
-          <a class="dropdown-item" [routerLink]="['']">Offerte</a>
-          <a class="dropdown-item" [routerLink]="['']">Factuur</a>
-          <a class="dropdown-item" [routerLink]="['']">Contact</a>
-          <a class="dropdown-item" [routerLink]="['']">Onkost</a>
-          <a class="dropdown-item" [routerLink]="['/']">Rapportage</a>
+          <a class="dropdown-item" [routerLink]="['/app/cart']">Winkelwagen</a>
+          <a class="dropdown-item" [routerLink]="['/app/logout']">Uitloggen</a>
         </div>
       </div>
     </div>
 
     <div class="header-item">
       <div class="dropdown">
-        <a data-toggle="dropdown">
-          <img  alt="albert">
-        </a>
-
         <div class="dropdown-menu dropdown-menu-right">
-          <a class="dropdown-item" [routerLink]="['/app/settings']">Instellingen</a>
-          <a class="dropdown-item" [routerLink]="['/logout']">Uitloggen</a>
+          <a class="dropdown-item" [routerLink]="['/app/card']">Winkelwagen</a>
+          <a class="dropdown-item" [routerLink]="['/app/logout']">Uitloggen</a>
         </div>
       </div>
     </div>

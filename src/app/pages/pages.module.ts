@@ -8,12 +8,20 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {ProductComponent} from './product/product.component';
 import {LogoutComponent} from './logout/logout.component';
+import {ProductDetailComponent} from './product-detail/product-detail.component';
+import {CartComponent} from './cart/cart.component';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductEditComponent } from './product/product-edit/product-edit.component';
 
 @NgModule({
   declarations: [
     ProfileComponent,
     ProductComponent,
-    LogoutComponent
+    ProductDetailComponent,
+    CartComponent,
+    LogoutComponent,
+    ProductListComponent,
+    ProductEditComponent
 
   ],
   imports: [

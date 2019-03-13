@@ -13,6 +13,7 @@ import {AuthenicationService} from './shared/services/authenication.service';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {BasicAuthInterceptor} from './shared/interceptor/basic.interceptor';
 import {ErrorInterceptor} from './shared/interceptor/error.interceptor';
+import {SharedModule} from './shared/shared.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {ErrorInterceptor} from './shared/interceptor/error.interceptor';
     AppRoutingModule,
     HttpClientModule,
     ProjectModule,
-    PagesModule
+    PagesModule,
+    SharedModule
   ],
   providers: [
     AuthenicationService,

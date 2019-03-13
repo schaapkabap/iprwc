@@ -8,8 +8,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent implements OnInit {
-  @Output() currentClickSave = new EventEmitter();
-  @Output() currentClickPdf = new EventEmitter();
+
 
 
   menu = false;
@@ -24,12 +23,6 @@ export class SideBarComponent implements OnInit {
     this.menu = !this.menu;
   }
 
-  clickedSave() {
-    this.currentClickSave.emit();
-  }
-  clickedPdf() {
-    this.currentClickPdf.emit();
-  }
 
 
 }

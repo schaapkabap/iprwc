@@ -1,54 +1,54 @@
-<div id="login-page" class="center-field">
-  <div class="container">
+<app-header></app-header>
+<app-side-bar></app-side-bar>
+<div class="page-content">
 
-    <div class="image-container col">
-      <img alt="logo" src="../assets/albert.png">
-    </div>
+    <div class="d-flex flex-row justify-content-center">
 
-    <form class="form-container" [formGroup]="form" (ngSubmit)="onLogin()">
-      <div class="form-group">
-        <div>
-          <div class="form-group row">
-            <h1>Login</h1>
-          </div>
-          <div class="form-group row">
-            <label>Gebruikersnaam</label>
-            <input type="text" 
-              formControlName="username" 
-              class="form-control" 
-              placeholder="Uw gebruikersnaam" 
-              [ngClass]="{ 'is-invalid': submitted && form.controls.username.errors }">
-            <div class="invalid-feedback">
-              Gebruikersnaam is verplicht
+      <form class="form-container" [formGroup]="form" (ngSubmit)="onLogin()">
+        <div class="form-group">
+          <div>
+            <div class="form-group row">
+              <h1>Login</h1>
             </div>
-          </div>
-          <div class="form-group row">
-            <label>Wachtwoord</label>
-            <input type="password" 
-              formControlName="password" 
-              class="form-control" 
-              placeholder="Uw wachtwoord" 
-              [ngClass]="{ 'is-invalid': submitted && form.controls.password.errors }">
-            <div class="invalid-feedback" *ngIf="submitted && form.controls.password.errors">
-              Wachtwoord is verplicht
+            <div class="form-group row">
+              <label>Gebruikersnaam</label>
+              <input type="text"
+                     formControlName="username"
+                     class="form-control"
+                     placeholder="Uw gebruikersnaam"
+                     [ngClass]="{ 'is-invalid': submitted && form.controls.username.errors }">
+              <div class="invalid-feedback">
+                Gebruikersnaam is verplicht
+              </div>
             </div>
-          </div>
-          <div class="form-group row" *ngIf="submitted && error.length > 0">
-            <div class="alert alert-danger col-md-12 mb-0">
-              {{ error }}
+            <div class="form-group row">
+              <label>Wachtwoord</label>
+              <input type="password"
+                     formControlName="password"
+                     class="form-control"
+                     placeholder="Uw wachtwoord"
+                     [ngClass]="{ 'is-invalid': submitted && form.controls.password.errors }">
+              <div class="invalid-feedback" *ngIf="submitted && form.controls.password.errors">
+                Wachtwoord is verplicht
+              </div>
             </div>
-          </div>
+            <div class="form-group row" *ngIf="submitted && error.length > 0">
+              <div class="alert alert-danger col-md-12 mb-0">
+                {{ error }}
+              </div>
+            </div>
 
-          <div class="form-group row">
-            <div class="col-6 p-0">
+            <div class="form-group row">
+              <div class="col-12 p-0">
               <span class="text-right d-block w-100">
-                <button [disabled]="loading" type="submit" class=" btn active m-0">Login</button>
+                <button [disabled]="loading" type="submit" class=" btn btn-primary">Login</button>
               </span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </form>
+      </form>
 
+    </div>
   </div>
-</div>
+
