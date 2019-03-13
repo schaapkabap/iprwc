@@ -15,7 +15,7 @@ export class ProductService {
   }
 
   get(id: number): Observable<Product> {
-    return this.http.get<Product>(environment.apiHostname + '/' + id);
+    return this.http.get<Product>(environment.apiHostname + 'products/' + id);
   }
 
   save(product: any): Observable<Object> {
