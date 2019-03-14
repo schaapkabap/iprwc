@@ -1,3 +1,66 @@
-<p>
-  product-edit works!
-</p>
+<app-header></app-header>
+<app-side-bar></app-side-bar>
+<div class="page-content">
+  <div class="container">
+    <div class="row m-0">
+      <div class="col col-5">
+
+        <form action="" class="albert-formfix shadow" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+
+          <div class="form-group">
+            <label for="name">Product</label>
+
+            <input type="text" [(ngModel)]="product.name"
+                   name="username"
+                   class="form-control"
+                   id="name"
+                   placeholder="Naam"
+                   required
+                   #name="ngModel">
+
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+
+            <input type="text" [(ngModel)]="product.description"
+                   name="description"
+                   class="form-control"
+                   id="description"
+                   placeholder="beschrijving"
+                   required
+                   #description="ngModel">
+
+          </div>
+          <div class="form-group">
+            <label for="price">Prijs</label>
+
+            <input type="text" [(ngModel)]="product.price"
+                   name="price"
+                   class="form-control"
+                   id="price"
+                   placeholder="Prijs"
+                   required
+                   #price="ngModel">
+
+          </div>
+          <div class="form-group">
+            <img class="img-thumbnail" src="{{product.image}}"><br>
+            <label for="image">ImageURl</label>
+
+            <input type="text" [(ngModel)]="product.image"
+                   name="price"
+                   class="form-control"
+                   id="image"
+                   placeholder="Prijs"
+                   required
+                   #price="ngModel">
+
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <a [routerLink]="['app/products']" class="btn btn-default">Cancel</a>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -8,6 +8,7 @@ import {LogoutComponent} from './pages/logout/logout.component';
 import {ProductDetailComponent} from './pages/product-detail/product-detail.component';
 import {CartComponent} from './pages/cart/cart.component';
 import {ProductListComponent} from './pages/product/product-list/product-list.component';
+import {ProductEditComponent} from './pages/product/product-edit/product-edit.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,11 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
 
+  {
+    path: 'app/product/edit/:id',
+    component: ProductEditComponent,
+    canActivate: [AuthGuard]
+  },
   {
     path: 'app/product/:id',
     component: ProductDetailComponent,
