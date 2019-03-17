@@ -15,7 +15,7 @@ html, body {
 .page-content {
   margin-left: 250px;
   padding-top: 50px;
-  background-color: #1f87a3;
+  background-color: whitesmoke;
   min-height: calc(100% - 50px);
 
   @include media-breakpoint-down(sm) {
