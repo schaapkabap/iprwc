@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiHostname: 'https://iprwc.schaapkabap.nl/api/',
+  apiHostname: 'http://iprwc.schaapkabap.nl:8080/api/',
 };

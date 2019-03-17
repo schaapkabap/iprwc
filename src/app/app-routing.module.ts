@@ -9,13 +9,10 @@ import {ProductDetailComponent} from './pages/product-detail/product-detail.comp
 import {CartComponent} from './pages/cart/cart.component';
 import {ProductListComponent} from './pages/product/product-list/product-list.component';
 import {ProductEditComponent} from './pages/product/product-edit/product-edit.component';
+import pp = jasmine.pp;
 
 const routes: Routes = [
-  {
-    path: 'app',
-    component: ProductComponent,
-    canActivate: [AuthGuard]
-  },
+
   {
     path: 'app/login',
     component: LoginComponent
@@ -61,7 +58,8 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: '', redirectTo: 'app/product', pathMatch: 'full'
+    path: '',
+    component: ProductComponent,
   }
 
 
