@@ -1,0 +1,14 @@
+@import '~node_modules/bootstrap/scss/bootstrap';
+
+.albert-formfix{
+
+  display: block;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+
+}

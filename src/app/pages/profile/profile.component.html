@@ -1,0 +1,59 @@
+<app-side-bar></app-side-bar>
+<app-header></app-header>
+
+<div class="page-content">
+
+  <div class="row m-0">
+    <div class="col col-5">
+      <form action="" class="albert-formfix shadow" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+
+        <div class="form-group">
+          <label for="username">Gebruikersnaam</label>
+
+          <input type="text" [(ngModel)]="user.username"
+                 name="username"
+                 class="form-control"
+                 id="username"
+                 placeholder="Gebruikersnaam"
+                 required
+                 #name="ngModel">
+
+          <div *ngIf="name.invalid && (name.dirty || name.touched)" class="invalid-feedback d-block">
+            Gebruikersnaam is ongeldig.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Wachtwoord</label>
+
+          <input type="password" [(ngModel)]="user.password"
+                 name="password"
+                 class="form-control"
+                 id="password"
+                 placeholder="Wachtwoord"
+                 required
+                 #password="ngModel">
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+
+          <input type="email" [(ngModel)]="user.email"
+                 name="email"
+                 class="form-control"
+                 id="email"
+                 placeholder="E-mail"
+                 required
+                 #email="ngModel">
+
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalid-feedback d-block">
+            E-mail is ongeldig.
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a [routerLink]="['app/login']" class="btn btn-default">Cancel</a>
+      </form>
+    </div>
+  </div>
+</div>

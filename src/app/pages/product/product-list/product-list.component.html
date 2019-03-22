@@ -1,0 +1,29 @@
+<app-header></app-header>
+<app-side-bar></app-side-bar>
+    <div class="page-content">
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">Product</th>
+          <th scope="col">Price</th>
+          <th scope="col">Image</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let product of products">
+          <th scope="row"><a routerLink="/app/product/{{product.id}}">{{product.name}}</a></th>
+          <td>{{product.price}}</td>
+          <td>{{product.image}}</td>
+          <td>
+            <button class="btn btn-primary" routerLink="/app/product/edit/{{product.id}}">Edit</button>
+          </td>
+          <td>
+            <button (click)="deleteItem(product)" type="button" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
