@@ -9,6 +9,7 @@ import {ProductDetailComponent} from './pages/product-detail/product-detail.comp
 import {CartComponent} from './pages/cart/cart.component';
 import {ProductListComponent} from './pages/product/product-list/product-list.component';
 import {ProductEditComponent} from './pages/product/product-edit/product-edit.component';
+import {ProductNewComponent} from './pages/product/product-new/product-new.component';
 
 const routes: Routes = [
 
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'app/product',
     component: ProductComponent
+  },
+  {
+    path: 'app/product/new',
+    component: ProductNewComponent
   },
   {
     path: 'app/product/list',

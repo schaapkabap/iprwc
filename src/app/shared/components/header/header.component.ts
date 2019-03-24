@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
+import {CartService} from '../../services/cart.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  @Output() total: number;
 
-  ngOnInit() {
+  constructor(private cart: CartService) {
   }
 
+  ngOnInit() {
+    this.cart.getWinkelwagen().subscribe(data => {
+      this.total = data.length;
+    });
+
+  }
 }

@@ -3,7 +3,7 @@
 
 <div class="page-content">
 
-<h1>Products</h1>
+  <h1>Products</h1>
   <div class="d-flex flex-wrap justify-content-center">
     <div *ngFor="let product of products; let i = index">
       <div class="p2">
@@ -13,7 +13,7 @@
             <h5 class="card-title"><a routerLink="/app/product/{{product.id}}">{{product.name}}</a></h5>
             <h6 class="card-subtitle mb-2 text-muted">price {{product.price}}</h6>
             <p class="card-text">{{product.description| slice:0:20}}</p>
-            <a href="#" class="card-link">Add to Card</a>
+            <a class="card-link" (click)="addToCart(product)">Add to Card</a>
           </div>
         </div>
       </div>
