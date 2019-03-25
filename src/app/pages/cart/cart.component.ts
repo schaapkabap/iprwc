@@ -11,8 +11,8 @@ import {isCombinedNodeFlagSet} from 'tslint';
 })
 export class CartComponent implements OnInit {
 
-  private products: Product [] = [];
-  private singleProducts: Product[] = [];
+  public products: Product [] = [];
+  public singleProducts: Product[] = [];
 
   constructor(private cart: CartService) {
   }
