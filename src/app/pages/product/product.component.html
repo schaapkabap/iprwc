@@ -13,7 +13,7 @@
             <h5 class="card-title"><a routerLink="/app/product/{{product.id}}">{{product.name}}</a></h5>
             <h6 class="card-subtitle mb-2 text-muted">price {{product.price}}</h6>
             <p class="card-text">{{product.description| slice:0:20}}</p>
-            <a class="card-link" (click)="addToCart(product)">Add to Card</a>
+            <button class="card-link btn btn-info" (click)="addToCart(product)">Add to Card</button>
           </div>
         </div>
       </div>

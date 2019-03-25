@@ -10,6 +10,7 @@ import {CartComponent} from './pages/cart/cart.component';
 import {ProductListComponent} from './pages/product/product-list/product-list.component';
 import {ProductEditComponent} from './pages/product/product-edit/product-edit.component';
 import {ProductNewComponent} from './pages/product/product-new/product-new.component';
+import {Auth} from './shared/models/auth.model';
 
 const routes: Routes = [
 
@@ -27,7 +28,8 @@ const routes: Routes = [
   },
   {
     path: 'app/product/new',
-    component: ProductNewComponent
+    component: ProductNewComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'app/product/list',

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CartService} from '../../shared/services/cart.service';
+import {Product} from '../../shared/models/product.model';
 
 @Component({
   selector: 'app-card',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
+  private products: Product [] = [];
+
+  constructor(private cart: CartService) {
+  }
 
   ngOnInit() {
+    this.cart.getWinkelwagen().subscribe(data => {
+      this.products = data;
+    });
 
   }
 

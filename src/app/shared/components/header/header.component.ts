@@ -9,7 +9,7 @@ import {Observable} from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() total: number;
+  total: number;
 
   constructor(private cart: CartService) {
   }
