@@ -1,5 +1,7 @@
 # Iprwc
 
+[![Build Status](https://travis-ci.com/schaapkabap/api.svg?token=EPT6wBfv6Dyky2yBVGW4&branch=master)](https://travis-ci.com/schaapkabap/api)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
 
 ## Development server
