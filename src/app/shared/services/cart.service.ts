@@ -17,6 +17,7 @@ export class CartService {
   constructor() {
 
     this.products = JSON.parse(localStorage.getItem('winkelwagen'));
+    this.total.next(this.products);
   }
 
   addProduct(p: Product) {
