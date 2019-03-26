@@ -14,6 +14,7 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
 import {RegisterComponent} from './register/register.component';
 import { ProductNewComponent } from './product/product-new/product-new.component';
+import {SharedModule} from '../shared/shared.module';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { ProductNewComponent } from './product/product-new/product-new.component
   imports: [
     RouterModule,
     CommonModule,
+    SharedModule,
     LoginModule,
     SideBarModule,
     HeaderModule,
