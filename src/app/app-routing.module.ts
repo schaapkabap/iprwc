@@ -5,7 +5,7 @@ import {LoginComponent} from './pages/login/login.component';
 import {AuthGuard} from './shared/guards/auth.guard';
 import {ProductComponent} from './pages/product/product.component';
 import {LogoutComponent} from './pages/logout/logout.component';
-import {ProductDetailComponent} from './pages/product-detail/product-detail.component';
+import {ProductDetailComponent} from './pages/product/product-detail/product-detail.component';
 import {CartComponent} from './pages/cart/cart.component';
 import {ProductListComponent} from './pages/product/product-list/product-list.component';
 import {ProductEditComponent} from './pages/product/product-edit/product-edit.component';

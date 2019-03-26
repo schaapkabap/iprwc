@@ -5,7 +5,7 @@ import {AppComponent} from './app.component';
 import {ProjectModule} from './pages/project/project.module';
 import {RegisterComponent} from './pages/register/register.component';
 import {ProductComponent} from './pages/product/product.component';
-import {ProductDetailComponent} from './pages/product-detail/product-detail.component';
+import {ProductDetailComponent} from './pages/product/product-detail/product-detail.component';
 import {ProfileComponent} from './pages/profile/profile.component';
 import {AppRoutingModule} from './app-routing.module';
 import {PagesModule} from './pages/pages.module';
