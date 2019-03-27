@@ -1,33 +1,23 @@
-<app-side-bar></app-side-bar>
-<app-header></app-header>
-
-<div class="page-content">
-  <h1>Cart page </h1>
-  <div class="d-flex flex-wrap justify-content-center">
-    <table class="table">
-      <thead>
-      <tr>
-        <th scope="col">Product</th>
-        <th scope="col">Price</th>
-        <th scope="col">Aantal</th>
-        <th scope="col">Delete</th>
-
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let product of singleProducts">
-        <th scope="row"><a routerLink="/app/product/{{product.id}}">{{product.name}}</a></th>
-        <td>{{product.price}}</td>
-        <td>
-          <button type="button" class="btn btn-outline-secondary" (click)="removeProductOfCart(product)">-</button>
-          {{getTotal(product)}}
-          <button type="button" class="btn btn-outline-secondary" (click)="addProductToCart(product)">+</button>
-        </td>
-        <td>
-          <button (click)="removeProductOfCart(product)" type="button" class="btn btn-danger">Delete</button>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
+<h1>Cart page </h1>
+<div class="d-flex flex-wrap justify-content-center">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Product</th>
+      <th scope="col">Price</th>
+      <th scope="col">Aantal</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of singleProducts">
+      <th scope="row"><a routerLink="/app/product/{{product.id}}">{{product.name}}</a></th>
+      <td>{{product.price}}</td>
+      <td>
+        <button type="button" class="btn btn-outline-secondary" (click)="removeProductOfCart(product)">-</button>
+        {{getTotal(product)}}
+        <button type="button" class="btn btn-outline-secondary" (click)="addProductToCart(product)">+</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
 </div>

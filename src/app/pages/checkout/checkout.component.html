@@ -1,0 +1,60 @@
+<app-side-bar></app-side-bar>
+<app-header></app-header>
+<div class="page-content">
+  <div class="container-fluid">
+    <div class="d-flex flex-row">
+      <div class="col">
+        <app-card></app-card>
+      </div>
+      <div class="col bg-white border">
+        <div class="bg-light">
+          <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+
+            <div class="form-group">
+              <label for="firstname">Voornaam</label>
+
+              <input type="text"
+                     name="firstname"
+                     class="form-control"
+                     id="firstname"
+                     placeholder="Voornaam"
+                     required>
+            </div>
+            <div class="form-group">
+              <label for="lastname">Achternaam</label>
+
+              <input type="text"
+                     name="username"
+                     class="form-control"
+                     id="lastname"
+                     placeholder="Achternaam"
+                     required>
+            </div>
+            <div class="form-group">
+              <label for="address">Adres</label>
+
+              <input type="text"
+                     name="address"
+                     class="form-control"
+                     id="address"
+                     placeholder="Adres"
+                     required>
+            </div>
+            <div class="form-group">
+              <label for="huisnummer">Huisnummer</label>
+
+              <input type="text"
+                     name="huisnummer"
+                     class="form-control"
+                     id="huisnummer"
+                     placeholder="huisnummer"
+                     required>
+            </div>
+            <button type="submit" class="btn btn-primary">Betalen</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

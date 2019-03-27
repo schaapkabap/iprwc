@@ -15,6 +15,8 @@ import { ProductEditComponent } from './product/product-edit/product-edit.compon
 import {RegisterComponent} from './register/register.component';
 import { ProductNewComponent } from './product/product-new/product-new.component';
 import {SharedModule} from '../shared/shared.module';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import {SharedModule} from '../shared/shared.module';
     ProductListComponent,
     ProductEditComponent,
     RegisterComponent,
-    ProductNewComponent
+    ProductNewComponent,
+    AdminPanelComponent,
+    CheckoutComponent
 
   ],
   imports: [
