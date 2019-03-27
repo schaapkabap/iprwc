@@ -22,7 +22,7 @@ export class AddToCartButtonComponent implements OnInit {
 
   @HostListener('click') onClick() {
     this.cart.addProduct(this.product);
-    this.router.navigate(['/app/cart']);
+    this.router.navigate(['/app/product']);
   }
 
 }

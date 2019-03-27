@@ -158,4 +158,10 @@ fabric.properties
 
 # End of https://www.gitignore.io/api/angular,webstorm
 
+#travis deploykey to server
 deploy_key
+
+.gradle/
+gradle/
+gradlew
+gradlew.bat
