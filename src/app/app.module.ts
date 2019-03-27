@@ -14,6 +14,8 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {BasicAuthInterceptor} from './shared/interceptor/basic.interceptor';
 import {ErrorInterceptor} from './shared/interceptor/error.interceptor';
 import {SharedModule} from './shared/shared.module';
+import {SideBarModule} from './shared/components/side-bar/side-bar.module';
+import {HeaderModule} from './shared/components/header/header.module';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import {SharedModule} from './shared/shared.module';
     AppRoutingModule,
     HttpClientModule,
     ProjectModule,
+    HeaderModule,
+    SideBarModule,
     SharedModule,
     PagesModule
 
@@ -35,7 +39,7 @@ import {SharedModule} from './shared/shared.module';
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
   ],
   bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule {
 }

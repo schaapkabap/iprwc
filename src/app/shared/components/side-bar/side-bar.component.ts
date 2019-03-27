@@ -10,7 +10,6 @@ import {Router} from '@angular/router';
 export class SideBarComponent implements OnInit {
 
 
-
   menu = false;
 
   constructor() {
@@ -22,7 +21,6 @@ export class SideBarComponent implements OnInit {
   toggleMenu() {
     this.menu = !this.menu;
   }
-
 
 
 }
