@@ -1,3 +1,14 @@
-<p>
-  admin-panel works!
-</p>
+<app-side-bar></app-side-bar>
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <app-product-list></app-product-list>
+      <button type="button" class="btn btn-primary" routerLink="/app/product/new">Nieuw Product</button>
+    </div>
+    <div class="col">
+        <app-register></app-register>
+    </div>
+  </div>
+</div>
+
