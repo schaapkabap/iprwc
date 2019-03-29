@@ -16,11 +16,13 @@ import {ErrorInterceptor} from './shared/interceptor/error.interceptor';
 import {SharedModule} from './shared/shared.module';
 import {SideBarModule} from './shared/components/side-bar/side-bar.module';
 import {HeaderModule} from './shared/components/header/header.module';
+import {SideBarComponent} from './shared/components/side-bar/side-bar.component';
+import {BarService} from './shared/services/bar.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -28,18 +30,21 @@ import {HeaderModule} from './shared/components/header/header.module';
     HttpClientModule,
     ProjectModule,
     HeaderModule,
-    SideBarModule,
     SharedModule,
     PagesModule
 
   ],
   providers: [
     AuthenicationService,
+    BarService,
     {provide: HTTP_INTERCEPTORS, useClass: BasicAuthInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
   ],
   bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  entryComponents: [SideBarComponent],
+
+
 })
 export class AppModule {
 }
