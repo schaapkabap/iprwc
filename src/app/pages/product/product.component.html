@@ -4,21 +4,19 @@
 <div class="page-content">
 
   <h1>Products</h1>
-  <div class="row align-items-lg-end d-flex flex-wrap justify-content-center">
+  <div class="row row-eq-height d-flex flex-wrap">
 
 
-    <div *ngFor="let product of products; let i = index">
-      <div class="col-sm-4">
-        <div class="card mb-3" style="width: 18rem;">
-          <a routerLink="/app/product/{{product.id}}">
-            <img class="card-img-top img-fluid img hoverable" src="{{product.image}}" alt="Card image cap">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title"><a routerLink="/app/product/{{product.id}}">{{product.name}}</a></h5>
-            <h6 class="card-subtitle mb-2 text-muted">Prijs € {{product.price}}</h6>
-            <p class="card-text">{{product.description| slice:0:20}}</p>
-            <app-add-to-cart-button [product]="product"></app-add-to-cart-button>
-          </div>
+    <div class="col-sm-2 d-flex" *ngFor="let product of products; let i = index">
+      <div class="card mb-3 flex-fill align-content-center " >
+        <a routerLink="/app/product/{{product.id}}">
+          <img class="img-thumbnail" src="{{product.image}}" alt="Card image cap">
+        </a>
+        <div class="card-body align-content-end ">
+          <h5 class="card-title"><a routerLink="/app/product/{{product.id}}">{{product.name}}</a></h5>
+          <h6 class="card-subtitle mb-2 text-muted">Prijs € {{product.price}}</h6>
+          <p class="card-text">{{product.description| slice:0:20}}</p>
+          <app-add-to-cart-button [product]="product"></app-add-to-cart-button>
         </div>
       </div>
     </div>

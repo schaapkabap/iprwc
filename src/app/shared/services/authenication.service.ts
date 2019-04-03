@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Auth } from '../models/auth.model';
-import { map } from 'rxjs/operators';
-import { environment } from '../../../environments/environment';
-import { User } from '../models/user.model';
-import { BehaviorSubject } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Auth} from '../models/auth.model';
+import {map} from 'rxjs/operators';
+import {environment} from '../../../environments/environment';
+import {User} from '../models/user.model';
+import {BehaviorSubject, Observable} from 'rxjs';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class AuthenicationService {
 
   user: BehaviorSubject<User> = new BehaviorSubject(null);
@@ -32,7 +32,7 @@ export class AuthenicationService {
 
     return this.http.post<User>(environment.apiHostname + 'auth/login', body).pipe(map(data => {
       const auth = new Auth();
-      const user = <User> data;
+      const user = <User>data;
 
       if (user) {
         auth.user = user;
@@ -50,7 +50,13 @@ export class AuthenicationService {
     return this.user.getValue();
   }
 
+  currentObserverUser(): Observable<User> {
+    return this.user;
+  }
+
+
   logout() {
     localStorage.removeItem('authenticated_user');
+    this.user.next(null);
   }
 }

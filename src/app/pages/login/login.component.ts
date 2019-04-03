@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthenicationService } from 'src/app/shared/services/authenication.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {AuthenicationService} from 'src/app/shared/services/authenication.service';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Router, ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-inlog',
@@ -21,7 +21,8 @@ export class LoginComponent implements OnInit {
     private auth: AuthenicationService,
     private route: ActivatedRoute,
     private router: Router
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.form = this.formBuilder.group({
@@ -50,7 +51,12 @@ export class LoginComponent implements OnInit {
       this.form.controls.password.value
     ).subscribe(
       data => {
-        this.router.navigate([this.url]);
+        if (this.form.controls.username.value === 'admin') {
+          this.router.navigate(['app/admin-panel']);
+        } else {
+          this.router.navigate([this.url]);
+        }
+
       },
       error => {
         console.error(error);
