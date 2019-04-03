@@ -10,7 +10,7 @@ import {User} from '../../shared/models/user.model';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  user: User;
+  user: any;
   public form: FormGroup;
 
   constructor(private authService: AuthenicationService,
