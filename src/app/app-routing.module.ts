@@ -11,6 +11,8 @@ import {ProductListComponent} from './pages/product/product-list/product-list.co
 import {ProductEditComponent} from './pages/product/product-edit/product-edit.component';
 import {ProductNewComponent} from './pages/product/product-new/product-new.component';
 import {CheckoutComponent} from './pages/checkout/checkout.component';
+import {AdminPanelComponent} from './pages/admin-panel/admin-panel.component';
+import {UserGuard} from './shared/guards/user.guard';
 
 
 const routes: Routes = [
@@ -18,6 +20,11 @@ const routes: Routes = [
   {
     path: 'app/login',
     component: LoginComponent
+  },
+  {
+    path: 'app/admin-panel',
+    component: AdminPanelComponent,
+    canActivate: [UserGuard]
   },
   {
     path: 'app/logout',
@@ -32,12 +39,6 @@ const routes: Routes = [
     component: ProductNewComponent,
     canActivate: [AuthGuard]
   },
-  {
-    path: 'app/product/list',
-    component: ProductListComponent,
-    canActivate: [AuthGuard]
-  },
-
   {
     path: 'app/product/edit/:id',
     component: ProductEditComponent,

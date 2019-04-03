@@ -3,10 +3,14 @@
     <div class="header-item">
       <div class="dropdown">
         <button type="button" class="btn btn-primary" [routerLink]="['/app/cart']">🛒 {{total}}</button>
-        <button class="btn dropdown-toggle add-btn" data-toggle="dropdown">Winkelwagen</button>
+        <button class="btn dropdown-toggle add-btn" data-toggle="dropdown">Profile</button>
 
         <div class="dropdown-menu">
           <a class="dropdown-item" [routerLink]="['/app/cart']">Winkelwagen</a>
+          <a class="dropdown-item" [routerLink]="['/app/profile']">Profiel</a>
+          <div *ngIf="user.username === 'admin'">
+            <a class="dropdown-item" [routerLink]="['/app/admin-panel']">Adminpanel</a>
+          </div>
           <a class="dropdown-item" [routerLink]="['/app/logout']">Uitloggen</a>
         </div>
       </div>
@@ -16,6 +20,10 @@
       <div class="dropdown">
         <div class="dropdown-menu dropdown-menu-right">
           <a class="dropdown-item" [routerLink]="['/app/card']">Winkelwagen</a>
+          <a class="dropdown-item" [routerLink]="['/app/profile']">Profiel</a>
+          <div *ngIf="user.username === 'admin'">
+            <a class="dropdown-item" [routerLink]="['/app/admin-panel']">Adminpanel</a>
+          </div>
           <a class="dropdown-item" [routerLink]="['/app/logout']">Uitloggen</a>
         </div>
       </div>
