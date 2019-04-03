@@ -25,7 +25,11 @@ export class HeaderComponent implements OnInit {
       this.total = data.length;
     });
     this.authService.currentObserverUser().subscribe(data => {
-      this.user = data;
+      if (data == null) {
+        this.user = new User();
+      } else {
+        this.user = data;
+      }
     });
 
   }
