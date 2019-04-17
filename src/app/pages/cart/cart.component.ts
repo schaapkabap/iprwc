@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 import {CartService} from '../../shared/services/cart.service';
 import {Product} from '../../shared/models/product.model';
 import {forEach} from '@angular/router/src/utils/collection';
@@ -13,6 +13,7 @@ export class CartComponent implements OnInit {
 
   public products: Product [] = [];
   public singleProducts: Product[] = [];
+  @Output() total;
 
   constructor(private cart: CartService) {
   }
@@ -25,6 +26,7 @@ export class CartComponent implements OnInit {
 
     this.cart.getSingleProducts().subscribe(data => {
       this.singleProducts = data;
+      this.total = this.counTotal();
       console.log(data);
     });
 
@@ -38,6 +40,14 @@ export class CartComponent implements OnInit {
       product.id === singleProduct.id
     ));
     return singleProducts.length;
+  }
+  counTotal(): number {
+    let total: number;
+    total = 0;
+    for (const product of this.products) {
+      total = total + product.price;
+    }
+    return total;
   }
 
   removeProductOfCart(product: Product) {

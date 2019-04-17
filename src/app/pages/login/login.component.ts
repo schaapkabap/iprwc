@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
         if (this.form.controls.username.value === 'admin') {
           this.router.navigate(['app/admin-panel']);
         } else {
-          this.router.navigate([this.url]);
+          this.router.navigate(['app/profile']);
         }
 
       },
