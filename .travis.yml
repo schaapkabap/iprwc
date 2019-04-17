@@ -18,10 +18,11 @@ before_script:
 install:
   - npm install
 before_install:
+  - eval `ssh-agent -s`
   - openssl aes-256-cbc -K $encrypted_f1f87c9137b2_key -iv $encrypted_f1f87c9137b2_iv
     -in deploy_key.enc -out deploy_key -d
   - chmod 400 ./deploy_key
-  - ssh-add deploy_key
+  - ssh-add ./deploy_key
   - eval "$(ssh-agent -s)"
   - chmod 600 ./deploy_key
   - echo -e "Host schaapkabap.nl\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
