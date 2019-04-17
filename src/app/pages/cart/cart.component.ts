@@ -41,10 +41,10 @@ export class CartComponent implements OnInit {
     ));
     return singleProducts.length;
   }
-  counTotal(): number{
+  counTotal(): number {
     let total: number;
-    total= 0;
-    for(let product of this.products){
+    total = 0;
+    for (const product of this.products) {
       total = total + product.price;
     }
     return total;
