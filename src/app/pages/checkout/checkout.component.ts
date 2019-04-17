@@ -37,10 +37,12 @@ export class CheckoutComponent implements OnInit, AfterViewChecked {
       return actions.payment.create({
         payment: {
           transactions: [
-            { amount: { total: this.finalAmount, currency: 'INR' } }
+            {
+              amount: { total: '1.00', currency: 'USD' }
+            }
           ]
         }
-      });
+      })
     },
     onAuthorize: (data, actions) => {
       return actions.payment.execute().then((payment) => {
