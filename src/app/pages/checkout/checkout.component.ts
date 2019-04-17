@@ -42,7 +42,7 @@ export class CheckoutComponent implements OnInit, AfterViewChecked {
             }
           ]
         }
-      })
+      });
     },
     onAuthorize: (data, actions) => {
       return actions.payment.execute().then((payment) => {
