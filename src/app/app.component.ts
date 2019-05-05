@@ -7,4 +7,18 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   title = 'iprwc';
+constructor(public router: Router) {
+
+    // subscribe to router events and send page views to Google Analytics
+    this.router.events.subscribe(event => {
+
+      if (event instanceof NavigationEnd) {
+        ga('set', 'page', event.urlAfterRedirects);
+        ga('send', 'pageview');
+
+      }
+
+    });
+  }
+
 }
