@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
-
+import {NavigationEnd, Router} from '@angular/router';
+ // declare ga as a function to set and sent the events
+ declare let ga: Function;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
