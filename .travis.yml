@@ -5,7 +5,8 @@ language: node_js
 
 node_js:
   - '11'
-
+addons:
+  ssh_known_hosts: schaapkabap.nl
 apt:
   chrome: stable
 cache:
